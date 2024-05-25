@@ -1,0 +1,11 @@
+import random
+
+class DataFetcherAgent:
+    def _init_(self):
+        self.data = None
+
+    def fetch_data(self):
+        # Simulate fetching data from an external API
+        self.data = {"temperature": random.randint(-10, 40), "humidity": random.randint(10, 90)}
+        print(f"DataFetcherAgent: Fetched data: {self.data}")
+        return self.data
