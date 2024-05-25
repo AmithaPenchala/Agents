@@ -1,0 +1,15 @@
+def multi_agent_system():
+    # Instantiate the DataFetcherAgent
+    fetcher_agent = DataFetcherAgent()
+    
+    # Fetch data
+    fetched_data = fetcher_agent.fetch_data()
+    
+    # Instantiate the DataProcessorAgent with the fetched data
+    processor_agent = DataProcessorAgent(fetched_data)
+    
+    # Process data and perform actions
+    processor_agent.process_data_and_act()
+
+# Run the multi-agent system
+multi_agent_system()
