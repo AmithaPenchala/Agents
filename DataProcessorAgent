@@ -1,0 +1,22 @@
+class DataProcessorAgent:
+    def _init_(self, fetched_data):
+        self.data = fetched_data
+
+    def process_data_and_act(self):
+        if self.data:
+            temperature = self.data["temperature"]
+            humidity = self.data["humidity"]
+
+            # Process the data (simple logic for demonstration)
+            if temperature > 30:
+                action = "send cooling alert"
+            elif temperature < 0:
+                action = "send heating alert"
+            else:
+                action = "all conditions normal"
+
+            # Simulate sending an email
+            print(f"DataProcessorAgent: Processing data: {self.data}")
+            print(f"DataProcessorAgent: Action: {action}")
+        else:
+            print("DataProcessorAgent: No data to process")
